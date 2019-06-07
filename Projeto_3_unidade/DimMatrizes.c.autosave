@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+struct matrizes{
+    int nlinhas;
+    int ncolunas;
+};
+
+int dimMatrizes (float m){
+    stru
+    printf("===> Quantidade  de linhas: ");
+    scanf("%d", &m.nlinhas);
+}

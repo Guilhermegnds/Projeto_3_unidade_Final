@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <menu.h>
+#include <randmat.h>
+
+struct matrizes{
+    int nlinhas;
+    int ncolunas;
+    int m[100][100];
+};
+
+int main(void){
+    struct matrizes A, B, C;
+    int escolha, i, j;
+    do{
+    menu();
+    printf("\n\nDigite a sua escolha: ");
+    scanf("%d", &escolha);
+
+        switch (escolha) {
+
+    case 1:
+        printf("===> Quantidade de linhas de A: ");
+        scanf("%d", &A.nlinhas);
+        printf("===> Quantidade de colunas de A: ");
+        scanf("%d", &A.ncolunas);
+        break;
+    case 2:
+        printf("===> Quantidade de linhas de B: ");
+        scanf("%d", &B.nlinhas);
+        printf("===> Quantidade de colunas de B: ");
+        scanf("%d", &B.ncolunas);
+        break;
+    case 3:
+        randmat(A, i, j);
+    default:
+        printf("erro\n");
+       }
+        printf("\n");
+}while(escolha>0 && escolha <3);
+    return 0;
+}

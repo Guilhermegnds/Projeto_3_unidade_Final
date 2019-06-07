@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <menu.h>
+
+struct matrizes{
+    int nlinhas;
+    int ncolunas;
+    int m[100][100];
+};
+
+int main(void){
+    struct matrizes A, B, C;
+    int escolha;
+    menu();
+    printf("\n\nDigite a sua escolha: ");
+    scanf("%d", escolha);
+
+    do{
+        switch (escolha) {
+ 
+    case 1:
+        printf("===> Quantidade de linhas de A: ");
+        scanf("%d", &A.nlinhas);
+        printf("===> Quantidade de colunas de A: ");
+        scanf("%d", &A.ncolunas);
+        break;
+    case 2:
+        printf("===> Quantidade de linhas de B: ");
+        scanf("%d", &B.nlinhas);
+        printf("===> Quantidade de colunas de B: ");
+        scanf("%d", &B.ncolunas);
+        break;
+    default:
+        printf("erro\n");
+        
+ while(escolha>1 && escolha <3);       
+    
+    return 0;
+}
