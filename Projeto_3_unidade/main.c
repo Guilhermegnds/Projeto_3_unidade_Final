@@ -85,11 +85,21 @@ int main(void){
         case 12:
             imprimir(C);
             break;
+        case 13:
+            A = arquivos();
+            break;
+        case 14:
+            B = arquivos();
+            break;
+        case 15:
+           impArquivos(C);
+            break;
+        case 16:
+            break;
         default:
             printf("erro\n");
         }
-
         printf("\n");
-    }while(escolha>0 && escolha <17);
+    }while(escolha>0 && escolha <16);
     return 0;
 }

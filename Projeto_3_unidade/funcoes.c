@@ -60,18 +60,22 @@ struct matrizes subtracao(struct matrizes a, struct matrizes b){
 }
 
 struct matrizes multiplicar(struct matrizes a, struct matrizes b){
-      int i, j;
+      int i, j, nc, valor=0;
       struct matrizes c;
-    if(a.nlinhas == b.ncolunas){
+    if(a.ncolunas == b.nlinhas){
       c.ncolunas = b.ncolunas;
       c.nlinhas = a.nlinhas;
-      for (i=0;i<c.nlinhas;i++) {
-          for (j=0;j<c.ncolunas;j++) {
-              c.m[i][j] = ((a.m[i][j]*b.m[j][i])+(a.m[j][i]*b.m[i][j]));
+      for(i=0; i<c.nlinhas; i++){
+          for(j=0; j<c.ncolunas; j++){
+              c.m[i][j] =0;
+                  for(nc=0; nc<a.nlinhas; nc++){
+                     valor +=  a.m[i][nc] * b.m[nc][j];
+                  }
+                  c.m[i][j]=valor;
+                  valor=0;
           }
-          printf("\n");
       }
-    }
+}
     return c;
 }
 
