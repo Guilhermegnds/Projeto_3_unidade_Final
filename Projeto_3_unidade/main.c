@@ -3,10 +3,9 @@
 #include <matrizes.h>
 #include <funcoes.h>
 
-struct matrizes A, B, C;
-
 int main(void){
-    int escolha, i, j;
+    struct matrizes A, B, C;
+    int escolha;
     A.nlinhas = 0;
     A.ncolunas = 0;
     B.nlinhas = 0;

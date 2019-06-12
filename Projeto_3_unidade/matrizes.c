@@ -40,7 +40,7 @@ struct matrizes imprimir (struct matrizes m){
     }
     return m;
 }
-struct matrizes arquivos(){
+struct matrizes arquivos(void){
     struct matrizes n;
     int i, j;
     char a[100];
@@ -53,7 +53,8 @@ struct matrizes arquivos(){
     }
     a[strlen(a)-1]= 0;
     file = fopen(a, "r");
-    printf("%d, %d\n", n.nlinhas, n.ncolunas);
+    fscanf(file,"%d %d", &n.nlinhas, &n.ncolunas);
+//    printf("%d %d\n", n.nlinhas, n.ncolunas);
     for(i=0; i<n.nlinhas; i++){
         for( j=0; j<n.ncolunas; j++){
            fscanf(file, "%f", &n.m[i][j]);
@@ -77,9 +78,10 @@ struct matrizes impArquivos(struct matrizes m){
     fprintf(fileout,"%d %d\n", m.nlinhas, m.ncolunas);
     for(i=0; i<m.nlinhas; i++){
         for( j=0; j<m.ncolunas; j++){
-           fprintf(fileout, "%4f ", &m.m[i][j]);
+           fprintf(fileout, "%4f ", m.m[i][j]);
         }
         fprintf(fileout, "\n");
       }
+    fclose(fileout);
 }
 
