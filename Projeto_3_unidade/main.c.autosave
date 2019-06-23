@@ -132,6 +132,9 @@ elementos da matriz*/
         default:
             printf("\n\nNao eh uma operacao do programa\n");
         }
+        /* o "default" exibe a mensagem "Nao eh uma operacao do programa"
+para qualquer numero digitado pelo operador que não seja uma operacao do
+programa*/
         printf("\n");
     }while(escolha !=16);
     return 0;
