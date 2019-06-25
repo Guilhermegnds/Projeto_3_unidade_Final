@@ -118,8 +118,9 @@ respectivamente as matrizes A, B e C*/
             break;
             /* os "case 13" e "case 14" atribuem respectivamente
 as matrizes A e B uma matriz que será recolhida de um arquivo
-(recomenda-se um arquivo .txt), a localização dele sera digitada
-pelo operador*/
+(recomenda-se um arquivo .txt), nesse arquivo deve ter uma primeira linha
+com o numero de linhas e colunas respectivamente e a partir da segunda linha
+a matriz. A localização dele sera digitada pelo operador*/
         case 15:
             impArquivos(C);
             break;
@@ -132,6 +133,9 @@ elementos da matriz*/
         default:
             printf("\n\nNao eh uma operacao do programa\n");
         }
+        /* o "default" exibe a mensagem "Nao eh uma operacao do programa"
+para qualquer numero digitado pelo operador que não seja uma operacao do
+programa*/
         printf("\n");
     }while(escolha !=16);
     return 0;

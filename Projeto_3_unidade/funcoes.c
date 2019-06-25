@@ -82,6 +82,13 @@ struct matrizes multiplicar(struct matrizes a, struct matrizes b){
             }
         }
     }
+    else {
+        {
+                c.ncolunas = 0;
+                c.nlinhas = 0;
+                printf("\nNao eh possivel multiplicar as matrizes\n");
+            }
+    }
     return c;
 }
 
