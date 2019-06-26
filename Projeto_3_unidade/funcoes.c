@@ -21,7 +21,7 @@ void menu()
            "(15) Escrever a matriz C em um arquivo\n"
            "(16) Sair\n");
 }
-
+//A funcao menu abre o menu do trabalho//
 struct matrizes soma(struct matrizes a, struct matrizes b){
     int i, j;
     struct matrizes c;
