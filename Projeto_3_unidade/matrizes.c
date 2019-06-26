@@ -5,7 +5,7 @@
 
 struct matrizes randmat (int nlinhas, int ncolunas){
     /*Essa funcao vai gerar uma matriz com elementos gerados aleatoriamente
-em dados floate essa matriz será atribuida a matriz em que sera chamada
+em dados float e essa matriz será atribuida a matriz em que sera chamada
 a funcao*/
     int i, j;
     struct matrizes m;
