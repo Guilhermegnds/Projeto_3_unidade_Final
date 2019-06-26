@@ -23,6 +23,9 @@ void menu()
 }
 //A funcao menu abre o menu do trabalho//
 struct matrizes soma(struct matrizes a, struct matrizes b){
+    /*Essa funcao vai gerar uma matriz que sera a soma das matrizes
+    que serao chamadas, A e B respectivamente. Essa matriz eh atribuida
+    a matriz c.*/
     int i, j;
     struct matrizes c;
     if(a.nlinhas == b.nlinhas &&
@@ -44,6 +47,9 @@ struct matrizes soma(struct matrizes a, struct matrizes b){
     return c;
 }
 struct matrizes subtracao(struct matrizes a, struct matrizes b){
+    /*Essa funcao vai gerar uma matriz que sera a subtracao das matrizes
+    que serao chamadas, A e B respectivamente. Essa matriz eh atribuida
+    a matriz c.*/
     int i, j;
     struct matrizes c;
     if(a.nlinhas == b.nlinhas &&
@@ -66,6 +72,9 @@ struct matrizes subtracao(struct matrizes a, struct matrizes b){
 }
 
 struct matrizes multiplicar(struct matrizes a, struct matrizes b){
+    /*Essa funcao vai gerar uma matriz que sera a multiplicacao das matrizes
+    que serao chamadas, A e B respectivamente, seguindo os criterios de multi-
+    plicacao de marizes. Essa matriz eh atribuida a matriz c.*/
     int i, j, nc, valor=0;
     struct matrizes c;
     if(a.ncolunas == b.nlinhas){
